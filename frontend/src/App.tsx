@@ -18,6 +18,7 @@ function App() {
 
         <nav className = 'flex justify-between items-center' >
           <img src = { logo }  alt = "logo" />
+          
           <div className = 'xs:max-md:hidden md:max-2xl:flex justify-around gap-10' >
             <h3> Home </h3>
             <h3> New </h3>
@@ -25,6 +26,7 @@ function App() {
             <h3> Trending </h3>
             <h3> Categories </h3>
           </div>
+        
         </nav>
 
         <div className = 'flex md:max-2xl:h-2/3 xs:max-md:flex-col my-8 md:max-2xl:justify-between md:max-2xl:gap-10 '>
@@ -50,47 +52,58 @@ function App() {
           
           <aside className = 'md:max-2xl:w-1/3 h-full bg-slate-700 grid p-4' >
             <h2> New </h2>
+            
             <div>
               <h3> Hydrogen VS Electric Cars </h3>
               <h4> Will hydrogen-fueled cars ever catch up to EVs? </h4>
             </div>
+
             <div>
               <h3> The Downsides of AI Artistry </h3>
               <h4> What are the possible adverse effects of on-demand AI image generation? </h4>
             </div>
+            
             <div>
               <h3> Is VC Funding Drying Up? </h3>
               <h4> Private funding by VC firms is down 50% YOY. We take a look at what that means. </h4>
             </div>
           </aside>
+
         </div>
 
         <div className = 'md:max-2xl:h-1/5 flex justify-between xs:max-md:flex-col '>
+          
           <div className = 'flex gap-4'>
             <img src = { retro } alt=""  className = 'h-full object-contain' />
+           
             <div className="grid">
               <h2> 01 </h2>
               <h4> Reviving Retro PCs </h4>
               <p> What happens when old PCs are given modern upgrades? </p>
             </div>
+          
           </div>
 
           <div className = 'flex gap-4'>
             <img src = { laptop } alt=""  className = 'h-full object-contain' />
+          
             <div className="grid">
               <h2> 02 </h2>
               <h4> Top 10 Laptops of 2022 </h4>
               <p> Our best picks for various needs and budgets. </p>
             </div>
+          
           </div>
 
           <div className = 'flex gap-4'>
             <img src = { gaming } alt=""  className = 'h-full object-contain' />
+          
             <div className="grid">
               <h2> 03 </h2>
               <h4> The Growth of Gaming </h4>
               <p> How the pandemic has sparked fresh opportunities. </p>
             </div>
+          
           </div>
         </div>
 
