@@ -13,7 +13,7 @@ function App() {
   const [count, setCount] = useState()
 
   return (
-    <main className = 'w-screen h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-12'>
+    <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-16'>
         {/* <h1> Hello World! </h1> */}
 
         <nav className = 'flex justify-between items-center' >
@@ -27,14 +27,14 @@ function App() {
           </div>
         </nav>
 
-        <div className = 'flex md:max-2xl:h-2/3 xs:max-md:flex-col my-8 justify-between md:max-2xl:gap-10 '>
+        <div className = 'flex md:max-2xl:h-2/3 xs:max-md:flex-col my-8 md:max-2xl:justify-between md:max-2xl:gap-10 '>
           
           <article className = 'w-2/3 xs:max-md:w-full  h-full flex flex-col gap-y-2 '>           
             
             <img src = { desktopWeb3 }  alt = "an image of web3"  className = 'xs:max-md:hidden md:max-2xl:block md:max-2xl:h-2/3 w-full object-fill'  />
             <img src = { mobileWeb3 } alt = "an image of web3" className = 'xs:max-md:block md:max-2xl:hidden' />
             
-            <div className = ' h-full w-full flex justify-between gap-32 '>
+            <div className = ' h-full w-full flex xs:max-md:grid md:max-2xl:justify-between md:max-2xl:gap-32 '>
               <h1 className = 'text-4xl font-extrabold ' > The Bright Future of Web 3.0? </h1>
               <div className = 'px-3' >
                 <p className = 'text-xs' >                                   
@@ -48,7 +48,7 @@ function App() {
 
           </article>
           
-          <aside className = 'w-1/3 h-full bg-slate-700 grid' >
+          <aside className = 'md:max-2xl:w-1/3 h-full bg-slate-700 grid p-4' >
             <h2> New </h2>
             <div>
               <h3> Hydrogen VS Electric Cars </h3>
@@ -65,7 +65,7 @@ function App() {
           </aside>
         </div>
 
-        <div className = 'h-1/5 flex justify-between '>
+        <div className = 'md:max-2xl:h-1/5 flex justify-between xs:max-md:flex-col '>
           <div className = 'flex gap-4'>
             <img src = { retro } alt=""  className = 'h-full object-contain' />
             <div className="grid">
