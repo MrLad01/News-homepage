@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import logo from './assets/images/logo.svg';
 import menu from './assets/images/icon-menu.svg';
@@ -25,11 +25,11 @@ function App() {
           <img src = { logo }  alt = "logo" />
           
           <div className = 'xs:max-md:hidden md:max-2xl:flex justify-around gap-10' >
-            <h3> Home </h3>
-            <h3> New </h3>
-            <h3> Popular </h3>
-            <h3> Trending </h3>
-            <h3> Categories </h3>
+            <NavLink to = " "> Home </NavLink>
+            <NavLink to = " " > New </NavLink>
+            <NavLink to = " " > Popular </NavLink>
+            <NavLink to = " " > Trending </NavLink>
+            <NavLink to = " " > Categories </NavLink>
           </div>
 
           <img src = { menu } alt = " "  className = 'xs:max-md:block md:max-2xl:hidden cursor-pointer' onClick = { () => setOpen(true) }  />
@@ -41,11 +41,11 @@ function App() {
             <div className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 ' onMouseLeave = {() => setOpen(false) }>
                 <img src = { close } alt = ""  className = 'absolute right-4 cursor-pointer'  onClick = { () => setOpen(false) } />
                 <div className="grid  mt-20 ">
-                  <h3> Home </h3>
-                  <h3> New </h3>
-                  <h3> Popular </h3>
-                  <h3> Trending </h3>
-                  <h3> Categories </h3>
+                  <NavLink to = " " > Home </NavLink>
+                  <NavLink to = " " > New </NavLink>
+                  <NavLink to = " " > Popular </NavLink>
+                  <NavLink to = " " > Trending </NavLink>
+                  <NavLink to = " " > Categories </NavLink>
                 </div>
             </div>
           </div>  
