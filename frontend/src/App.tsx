@@ -28,11 +28,11 @@ function App() {
           <img src = { logo }  alt = "logo" />
           
           <div className = 'xs:max-md:hidden md:max-2xl:flex justify-around gap-10' >
-            <a href = " / " className = "hover:text-soft-red" > Home </a>
-            <a href = " / " className = "hover:text-soft-red" > New </a>
-            <a href = " / " className = "hover:text-soft-red" > Popular </a>
-            <a href = " / " className = "hover:text-soft-red" > Trending </a>
-            <a href = " / " className = "hover:text-soft-red" > Categories </a>
+            <a href = " / " className = "hover:text-soft-red opacity-70" > Home </a>
+            <a href = " / " className = "hover:text-soft-red opacity-70" > New </a>
+            <a href = " / " className = "hover:text-soft-red opacity-70" > Popular </a>
+            <a href = " / " className = "hover:text-soft-red opacity-70" > Trending </a>
+            <a href = " / " className = "hover:text-soft-red opacity-70" > Categories </a>
           </div>
 
           <img src = { menu } alt = " "  className = 'xs:max-md:block md:max-2xl:hidden cursor-pointer' onClick = { () => setOpen(true) }  />
@@ -111,7 +111,7 @@ function App() {
             <div className = ' h-full w-full flex xs:max-md:grid xs:max-md:my-4  '>
               <h1 className = 'text-[40px] font-extrabold tracking-wide pr-12 leading-[2.4rem]' > The Bright Future of Web 3.0? </h1>
               <div className = 'md:max-2xl:px-3' >
-                <p className = 'text-xs text-left leading-5 mb-5 xs:max-md:mt-2 ' >                                   
+                <p className = 'text-xs text-left leading-5 mb-5 xs:max-md:mt-2 opacity-70 ' >                                   
                   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
                   But is it really fulfilling its promise?
                 </p>
