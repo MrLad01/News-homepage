@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-10'>
+    <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-10 bg-off-white '>
         {/* <h1> Hello World! </h1> */}
 
         <nav className = 'flex justify-between items-center' >
