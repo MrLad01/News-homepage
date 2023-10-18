@@ -12,12 +12,13 @@ import retro from './assets/images/image-retro-pcs.jpg';
 import laptop from './assets/images/image-top-laptops.jpg';
 import gaming from './assets/images/image-gaming-growth.jpg';
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+
  
 
-
 function App() {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
+
 
   return (
     <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-10'>
@@ -40,14 +41,61 @@ function App() {
         { open && 
           <div>
             <div className = 'w-full h-full absolute top-0 left-0 bg-vdark-blue opacity-30' ></div>
-            <motion.div className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 ' onMouseLeave = {() => setOpen(false) }>
+            <motion.div 
+                className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 side' 
+                onMouseLeave = {() => setOpen(false) }
+                initial = {{ opacity: 0, x:100 }}
+                whileInView = {{ opacity: 1, x:0 }}
+                transition = {{ duration: 0.25, delay: 0.25 }}
+            >
                 <img src = { close } alt = ""  className = 'absolute right-4 cursor-pointer'  onClick = { () => setOpen(false) } />
+                
                 <div className="grid  mt-20 ">
-                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Home </a>
-                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > New </a>
-                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Popular </a>
-                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Trending </a>
-                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Categories </a>
+                  <motion.a 
+                      href = " / " 
+                      className = "hover:text-soft-red text-md font-normal my-2 sidebar" 
+                      initial = {{ opacity: 0, x:100 }}
+                      whileInView = {{ opacity: 1, x:0 }}
+                      transition = {{ duration: 0.3, delay: 0.3 }}
+                  >
+                       Home 
+                  </motion.a>
+                  <motion.a 
+                      href = " / " 
+                      className = "hover:text-soft-red text-md font-normal my-2 sidebar" 
+                      initial = {{ opacity: 0, x:100 }}
+                      whileInView = {{ opacity: 1, x:0 }}
+                      transition = {{ duration: 0.32, delay: 0.32 }}
+                  >
+                       New 
+                  </motion.a>
+                  <motion.a 
+                      href = " / " 
+                      className = "hover:text-soft-red text-md font-normal my-2 sidebar" 
+                      initial = {{ opacity: 0, x:100 }}
+                      whileInView = {{ opacity: 1, x:0 }}
+                      transition = {{ duration: 0.34, delay: 0.34 }}
+                  > 
+                      Popular 
+                  </motion.a>
+                  <motion.a 
+                      href = " / " 
+                      className = "hover:text-soft-red text-md font-normal my-2 sidebar" 
+                      initial = {{ opacity: 0, x:100 }}
+                      whileInView = {{ opacity: 1, x:0 }}
+                      transition = {{ duration: 0.36, delay: 0.36 }}
+                  > 
+                      Trending 
+                  </motion.a>
+                  <motion.a 
+                      href = " / " 
+                      className = "hover:text-soft-red text-md font-normal my-2 sidebar"
+                      initial = {{ opacity: 0, x:100 }}
+                      whileInView = {{ opacity: 1, x:0 }}
+                      transition = {{ duration: 0.38, delay: 0.38 }}
+                  > 
+                      Categories 
+                  </motion.a>
                 </div>
             </motion.div>
           </div>  
