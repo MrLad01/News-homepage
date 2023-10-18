@@ -39,15 +39,15 @@ function App() {
 
         { open && 
           <div>
-            <div className = 'w-full h-full absolute top-0 left-0 bg-slate-500 opacity-50' ></div>
+            <div className = 'w-full h-full absolute top-0 left-0 bg-vdark-blue opacity-30' ></div>
             <motion.div className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 ' onMouseLeave = {() => setOpen(false) }>
                 <img src = { close } alt = ""  className = 'absolute right-4 cursor-pointer'  onClick = { () => setOpen(false) } />
                 <div className="grid  mt-20 ">
-                  <a href = " / " className = "hover:text-soft-red" > Home </a>
-                  <a href = " / " className = "hover:text-soft-red" > New </a>
-                  <a href = " / " className = "hover:text-soft-red" > Popular </a>
-                  <a href = " / " className = "hover:text-soft-red" > Trending </a>
-                  <a href = " / " className = "hover:text-soft-red" > Categories </a>
+                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Home </a>
+                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > New </a>
+                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Popular </a>
+                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Trending </a>
+                  <a href = " / " className = "hover:text-soft-red text-md font-normal my-2" > Categories </a>
                 </div>
             </motion.div>
           </div>  
@@ -60,10 +60,10 @@ function App() {
             <img src = { desktopWeb3 }  alt = "an image of web3"  className = 'xs:max-md:hidden md:max-2xl:block md:max-2xl:h-2/3 w-full object-fill'  />
             <img src = { mobileWeb3 } alt = "an image of web3" className = 'xs:max-md:block md:max-2xl:hidden' />
             
-            <div className = ' h-full w-full flex xs:max-md:grid   '>
+            <div className = ' h-full w-full flex xs:max-md:grid xs:max-md:my-4  '>
               <h1 className = 'text-[40px] font-extrabold tracking-wide pr-12 leading-[2.4rem]' > The Bright Future of Web 3.0? </h1>
               <div className = 'md:max-2xl:px-3' >
-                <p className = 'text-xs text-left leading-5 mb-5 ' >                                   
+                <p className = 'text-xs text-left leading-5 mb-5 xs:max-md:mt-2 ' >                                   
                   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
                   But is it really fulfilling its promise?
                 </p>
@@ -77,17 +77,17 @@ function App() {
           <aside className = 'md:max-2xl:w-1/3 h-full bg-vdark-blue grid p-4' >
             <h2 className = 'text-soft-orange text-3xl font-semibold' > New </h2>
             
-            <div className = ' pt-1'>
+            <div className = ' pt-1 xs:max-md:pt-5 xs:max-md:pb-5 '>
               <h3 className = 'text-white hover:text-soft-orange font-semibold cursor-pointer'> Hydrogen VS Electric Cars </h3>
               <h4 className = 'text-white opacity-50 text-xs mt-2'> Will hydrogen-fueled cars ever catch up to EVs? </h4>
             </div>
 
-            <div className = ' border-t pt-5 border-opacity-40 border-white'>
+            <div className = ' border-t pt-5 xs:max-md:pb-5 border-opacity-40 border-white'>
               <h3 className = 'text-white hover:text-soft-orange font-semibold cursor-pointer'> The Downsides of AI Artistry </h3>
               <h4 className = 'text-white opacity-50 text-xs mt-2'> What are the possible adverse effects of on-demand AI image generation? </h4>
             </div>
             
-            <div className = ' border-t pt-5 border-opacity-40 border-white'>
+            <div className = ' border-t pt-5 xs:max-md:pb-5 border-opacity-40 border-white'>
               <h3 className = 'text-white hover:text-soft-orange font-semibold cursor-pointer'> Is VC Funding Drying Up? </h3>
               <h4 className = 'text-white opacity-50 text-xs mt-2'> Private funding by VC firms is down 50% YOY. We take a look at what that means. </h4>
             </div>
@@ -98,34 +98,34 @@ function App() {
         <div className = 'md:max-2xl:h-1/6 flex justify-between xs:max-md:flex-col gap-10 '>
           
           <div className = 'flex gap-4'>
-            <img src = { retro } alt=""  className = 'h-full object-contain' />
+            <img src = { retro } alt=""  className = 'h-full object-contain xs:max-md:w-1/3' />
            
             <div className="grid">
               <h2 className = 'text-2xl font-extrabold opacity-30 '> 01 </h2>
-              <h4 className = 'text-sm font-extrabold' > Reviving Retro PCs </h4>
-              <p className = 'text-xs opacity-70 '> What happens when old PCs are given modern upgrades? </p>
+              <h4 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > Reviving Retro PCs </h4>
+              <p className = 'text-xs opacity-70 xs:max-md:text-base'> What happens when old PCs are given modern upgrades? </p>
             </div>
           
           </div>
 
           <div className = 'flex gap-4'>
-            <img src = { laptop } alt=""  className = 'h-full object-contain' />
+            <img src = { laptop } alt=""  className = 'h-full object-contain xs:max-md:w-1/3' />
           
             <div className="grid">
               <h2 className = 'text-2xl font-extrabold opacity-30 '> 02 </h2>
-              <h4 className = 'text-sm font-extrabold' > Top 10 Laptops of 2022 </h4>
-              <p className = 'text-xs opacity-70 '> Our best picks for various needs and budgets. </p>
+              <h4 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > Top 10 Laptops of 2022 </h4>
+              <p className = 'text-xs opacity-70 xs:max-md:text-base'> Our best picks for various needs and budgets. </p>
             </div>
           
           </div>
 
           <div className = 'flex gap-4'>
-            <img src = { gaming } alt=""  className = 'h-full object-contain' />
+            <img src = { gaming } alt=""  className = 'h-full object-contain xs:max-md:w-1/3' />
           
             <div className="grid">
               <h2 className = 'text-2xl font-extrabold opacity-30 '> 03 </h2>
-              <h4 className = 'text-sm font-extrabold' > The Growth of Gaming </h4>
-              <p className = 'text-xs opacity-70 '> How the pandemic has sparked fresh opportunities. </p>
+              <h4 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > The Growth of Gaming </h4>
+              <p className = 'text-xs opacity-70 xs:max-md:text-base'> How the pandemic has sparked fresh opportunities. </p>
             </div>
           
           </div>
