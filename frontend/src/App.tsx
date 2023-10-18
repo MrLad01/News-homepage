@@ -49,7 +49,7 @@ function App() {
                 transition = {{ duration: 0.25, delay: 0.25 }}
             >
                 <img src = { close } alt = ""  className = 'absolute right-4 cursor-pointer'  onClick = { () => setOpen(false) } />
-                
+
                 <div className="grid  mt-20 ">
                   <motion.a 
                       href = " / " 
@@ -150,7 +150,7 @@ function App() {
            
             <div className="grid">
               <h2 className = 'text-2xl font-extrabold opacity-30 '> 01 </h2>
-              <h4 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > Reviving Retro PCs </h4>
+              <h3 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > Reviving Retro PCs </h3>
               <p className = 'text-xs opacity-70 xs:max-md:text-base'> What happens when old PCs are given modern upgrades? </p>
             </div>
           
@@ -161,7 +161,7 @@ function App() {
           
             <div className="grid">
               <h2 className = 'text-2xl font-extrabold opacity-30 '> 02 </h2>
-              <h4 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > Top 10 Laptops of 2022 </h4>
+              <h3 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > Top 10 Laptops of 2022 </h3>
               <p className = 'text-xs opacity-70 xs:max-md:text-base'> Our best picks for various needs and budgets. </p>
             </div>
           
@@ -172,7 +172,7 @@ function App() {
           
             <div className="grid">
               <h2 className = 'text-2xl font-extrabold opacity-30 '> 03 </h2>
-              <h4 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > The Growth of Gaming </h4>
+              <h3 className = 'text-sm font-extrabold hover:text-soft-red cursor-pointer xs:max-md:text-base' > The Growth of Gaming </h3>
               <p className = 'text-xs opacity-70 xs:max-md:text-base'> How the pandemic has sparked fresh opportunities. </p>
             </div>
           
