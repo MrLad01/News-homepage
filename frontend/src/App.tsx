@@ -1,8 +1,13 @@
 import { useState } from 'react';
 // import { Link } from 'react-router-dom';
+
 import logo from './assets/images/logo.svg';
+import menu from './assets/images/icon-menu.svg';
+import close from './assets/images/icon-menu-close.svg';
+
 import desktopWeb3 from './assets/images/image-web-3-desktop.jpg';
 import mobileWeb3 from './assets/images/image-web-3-mobile.jpg';
+
 import retro from './assets/images/image-retro-pcs.jpg';
 import laptop from './assets/images/image-top-laptops.jpg';
 import gaming from './assets/images/image-gaming-growth.jpg';
@@ -10,7 +15,7 @@ import gaming from './assets/images/image-gaming-growth.jpg';
 
 
 function App() {
-  const [count, setCount] = useState()
+  const [open, setOpen] = useState(false)
 
   return (
     <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-16'>
@@ -26,8 +31,25 @@ function App() {
             <h3> Trending </h3>
             <h3> Categories </h3>
           </div>
-        
+
+          <img src = { menu } alt = " "  className = 'xs:max-md:block md:max-2xl:hidden cursor-pointer' onClick = { () => setOpen(true) }  />
         </nav>
+
+        { open && 
+          <div>
+            <div className = 'w-full h-full absolute top-0 left-0 bg-slate-500 opacity-50' ></div>
+            <div className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 ' onMouseLeave = {() => setOpen(false) }>
+                <img src = { close } alt = ""  className = 'absolute right-4 cursor-pointer'  onClick = { () => setOpen(false) } />
+                <div className="grid  mt-20 ">
+                  <h3> Home </h3>
+                  <h3> New </h3>
+                  <h3> Popular </h3>
+                  <h3> Trending </h3>
+                  <h3> Categories </h3>
+                </div>
+            </div>
+          </div>  
+        }
 
         <div className = 'flex md:max-2xl:h-2/3 xs:max-md:flex-col my-8 md:max-2xl:justify-between md:max-2xl:gap-10 '>
           
@@ -38,12 +60,12 @@ function App() {
             
             <div className = ' h-full w-full flex xs:max-md:grid md:max-2xl:justify-between md:max-2xl:gap-32 '>
               <h1 className = 'text-4xl font-extrabold ' > The Bright Future of Web 3.0? </h1>
-              <div className = 'px-3' >
+              <div className = 'md:max-2xl:px-3' >
                 <p className = 'text-xs' >                                   
                   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
                   But is it really fulfilling its promise?
                 </p>
-                <button> READ MORE </button>
+                <button className = 'px-4 py-2 hover:bg-slate-800 bg-orange-600 text-white outline-0 rounded-sm '> READ MORE </button>
               </div>
 
             </div>
