@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 import logo from './assets/images/logo.svg';
 import menu from './assets/images/icon-menu.svg';
@@ -11,6 +11,8 @@ import mobileWeb3 from './assets/images/image-web-3-mobile.jpg';
 import retro from './assets/images/image-retro-pcs.jpg';
 import laptop from './assets/images/image-top-laptops.jpg';
 import gaming from './assets/images/image-gaming-growth.jpg';
+
+import { motion } from "framer-motion"
  
 
 
@@ -18,18 +20,18 @@ function App() {
   const [open, setOpen] = useState(false)
 
   return (
-    <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-16'>
+    <main className = 'w-full h-screen xs:max-md:p-5 md:max-2xl:px-40 md:max-2xl:py-10'>
         {/* <h1> Hello World! </h1> */}
 
         <nav className = 'flex justify-between items-center' >
           <img src = { logo }  alt = "logo" />
           
           <div className = 'xs:max-md:hidden md:max-2xl:flex justify-around gap-10' >
-            <NavLink to = " "> Home </NavLink>
-            <NavLink to = " " > New </NavLink>
-            <NavLink to = " " > Popular </NavLink>
-            <NavLink to = " " > Trending </NavLink>
-            <NavLink to = " " > Categories </NavLink>
+            <a href = " / " className = "hover:text-soft-red" > Home </a>
+            <a href = " / " className = "hover:text-soft-red" > New </a>
+            <a href = " / " className = "hover:text-soft-red" > Popular </a>
+            <a href = " / " className = "hover:text-soft-red" > Trending </a>
+            <a href = " / " className = "hover:text-soft-red" > Categories </a>
           </div>
 
           <img src = { menu } alt = " "  className = 'xs:max-md:block md:max-2xl:hidden cursor-pointer' onClick = { () => setOpen(true) }  />
@@ -38,70 +40,70 @@ function App() {
         { open && 
           <div>
             <div className = 'w-full h-full absolute top-0 left-0 bg-slate-500 opacity-50' ></div>
-            <div className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 ' onMouseLeave = {() => setOpen(false) }>
+            <motion.div className = 'xs:max-md:block md:max-2xl:hidden h-screen w-3/4 bg-white absolute top-0 right-0 z-10 px-4 py-8 ' onMouseLeave = {() => setOpen(false) }>
                 <img src = { close } alt = ""  className = 'absolute right-4 cursor-pointer'  onClick = { () => setOpen(false) } />
                 <div className="grid  mt-20 ">
-                  <NavLink to = " " > Home </NavLink>
-                  <NavLink to = " " > New </NavLink>
-                  <NavLink to = " " > Popular </NavLink>
-                  <NavLink to = " " > Trending </NavLink>
-                  <NavLink to = " " > Categories </NavLink>
+                  <a href = " / " className = "hover:text-soft-red" > Home </a>
+                  <a href = " / " className = "hover:text-soft-red" > New </a>
+                  <a href = " / " className = "hover:text-soft-red" > Popular </a>
+                  <a href = " / " className = "hover:text-soft-red" > Trending </a>
+                  <a href = " / " className = "hover:text-soft-red" > Categories </a>
                 </div>
-            </div>
+            </motion.div>
           </div>  
         }
 
         <div className = 'flex md:max-2xl:h-2/3 xs:max-md:flex-col my-8 md:max-2xl:justify-between md:max-2xl:gap-10 '>
           
-          <article className = 'w-2/3 xs:max-md:w-full  h-full flex flex-col gap-y-2 '>           
+          <article className = 'w-2/3 xs:max-md:w-full  h-full flex flex-col gap-y-4 '>           
             
             <img src = { desktopWeb3 }  alt = "an image of web3"  className = 'xs:max-md:hidden md:max-2xl:block md:max-2xl:h-2/3 w-full object-fill'  />
             <img src = { mobileWeb3 } alt = "an image of web3" className = 'xs:max-md:block md:max-2xl:hidden' />
             
-            <div className = ' h-full w-full flex xs:max-md:grid md:max-2xl:justify-between md:max-2xl:gap-32 '>
-              <h1 className = 'text-4xl font-extrabold ' > The Bright Future of Web 3.0? </h1>
+            <div className = ' h-full w-full flex xs:max-md:grid   '>
+              <h1 className = 'text-[40px] font-extrabold tracking-wide pr-12 leading-[2.4rem]' > The Bright Future of Web 3.0? </h1>
               <div className = 'md:max-2xl:px-3' >
-                <p className = 'text-xs' >                                   
+                <p className = 'text-xs text-left leading-5 mb-5 ' >                                   
                   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
                   But is it really fulfilling its promise?
                 </p>
-                <button className = 'px-4 py-2 hover:bg-slate-800 bg-orange-600 text-white outline-0 rounded-sm '> READ MORE </button>
+                <button className = 'px-6 py-2.5 hover:bg-vdark-blue bg-soft-red text-white outline-0 rounded-sm tracking-[0.3em] text-xs'> READ MORE </button>
               </div>
 
             </div>
 
           </article>
           
-          <aside className = 'md:max-2xl:w-1/3 h-full bg-slate-700 grid p-4' >
-            <h2> New </h2>
+          <aside className = 'md:max-2xl:w-1/3 h-full bg-vdark-blue grid p-4' >
+            <h2 className = 'text-soft-orange text-3xl font-semibold' > New </h2>
             
-            <div>
-              <h3> Hydrogen VS Electric Cars </h3>
-              <h4> Will hydrogen-fueled cars ever catch up to EVs? </h4>
+            <div className = ' pt-1'>
+              <h3 className = 'text-white hover:text-soft-orange font-semibold cursor-pointer'> Hydrogen VS Electric Cars </h3>
+              <h4 className = 'text-white opacity-50 text-xs mt-2'> Will hydrogen-fueled cars ever catch up to EVs? </h4>
             </div>
 
-            <div>
-              <h3> The Downsides of AI Artistry </h3>
-              <h4> What are the possible adverse effects of on-demand AI image generation? </h4>
+            <div className = ' border-t pt-5 border-opacity-40 border-white'>
+              <h3 className = 'text-white hover:text-soft-orange font-semibold cursor-pointer'> The Downsides of AI Artistry </h3>
+              <h4 className = 'text-white opacity-50 text-xs mt-2'> What are the possible adverse effects of on-demand AI image generation? </h4>
             </div>
             
-            <div>
-              <h3> Is VC Funding Drying Up? </h3>
-              <h4> Private funding by VC firms is down 50% YOY. We take a look at what that means. </h4>
+            <div className = ' border-t pt-5 border-opacity-40 border-white'>
+              <h3 className = 'text-white hover:text-soft-orange font-semibold cursor-pointer'> Is VC Funding Drying Up? </h3>
+              <h4 className = 'text-white opacity-50 text-xs mt-2'> Private funding by VC firms is down 50% YOY. We take a look at what that means. </h4>
             </div>
           </aside>
 
         </div>
 
-        <div className = 'md:max-2xl:h-1/5 flex justify-between xs:max-md:flex-col '>
+        <div className = 'md:max-2xl:h-1/6 flex justify-between xs:max-md:flex-col gap-10 '>
           
           <div className = 'flex gap-4'>
             <img src = { retro } alt=""  className = 'h-full object-contain' />
            
             <div className="grid">
-              <h2> 01 </h2>
-              <h4> Reviving Retro PCs </h4>
-              <p> What happens when old PCs are given modern upgrades? </p>
+              <h2 className = 'text-2xl font-extrabold opacity-30 '> 01 </h2>
+              <h4 className = 'text-sm font-extrabold' > Reviving Retro PCs </h4>
+              <p className = 'text-xs opacity-70 '> What happens when old PCs are given modern upgrades? </p>
             </div>
           
           </div>
@@ -110,9 +112,9 @@ function App() {
             <img src = { laptop } alt=""  className = 'h-full object-contain' />
           
             <div className="grid">
-              <h2> 02 </h2>
-              <h4> Top 10 Laptops of 2022 </h4>
-              <p> Our best picks for various needs and budgets. </p>
+              <h2 className = 'text-2xl font-extrabold opacity-30 '> 02 </h2>
+              <h4 className = 'text-sm font-extrabold' > Top 10 Laptops of 2022 </h4>
+              <p className = 'text-xs opacity-70 '> Our best picks for various needs and budgets. </p>
             </div>
           
           </div>
@@ -121,9 +123,9 @@ function App() {
             <img src = { gaming } alt=""  className = 'h-full object-contain' />
           
             <div className="grid">
-              <h2> 03 </h2>
-              <h4> The Growth of Gaming </h4>
-              <p> How the pandemic has sparked fresh opportunities. </p>
+              <h2 className = 'text-2xl font-extrabold opacity-30 '> 03 </h2>
+              <h4 className = 'text-sm font-extrabold' > The Growth of Gaming </h4>
+              <p className = 'text-xs opacity-70 '> How the pandemic has sparked fresh opportunities. </p>
             </div>
           
           </div>
